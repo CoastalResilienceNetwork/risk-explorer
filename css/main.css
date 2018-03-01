@@ -1,0 +1,12 @@
+.re-top-wrap h3{
+	margin-top:1rem; 
+}
+.re-top-wrap h3, .re-top-wrap h4{
+	font-weight:bold;
+}
+.re-top-wrap label{
+	margin-left:10px;
+}
+.re-top-wrap .form-component span{
+	margin-left:4px;
+}
