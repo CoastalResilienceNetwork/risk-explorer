@@ -36,11 +36,11 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 					t.esriapi.addGraphics(t);			
 				});	
 				// create symbols
-				t.sym1  = new SimpleMarkerSymbol(SimpleMarkerSymbol.STYLE_CIRCLE, 9, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([0,0,0,0.5]), 1), new Color([44,123,182]));
-				t.sym2  = new SimpleMarkerSymbol(SimpleMarkerSymbol.STYLE_CIRCLE, 9, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([0,0,0,0.5]), 1), new Color([171,217,233]));
-				t.sym3  = new SimpleMarkerSymbol(SimpleMarkerSymbol.STYLE_CIRCLE, 9, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([0,0,0,0.5]), 1), new Color([255,255,191]));
-				t.sym4  = new SimpleMarkerSymbol(SimpleMarkerSymbol.STYLE_CIRCLE, 9, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([0,0,0,0.5]), 1), new Color([253,174,97]));
-				t.sym5  = new SimpleMarkerSymbol(SimpleMarkerSymbol.STYLE_CIRCLE, 9, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([0,0,0,0.5]), 1), new Color([215,25,28]));
+				t.sym1  = new SimpleMarkerSymbol(SimpleMarkerSymbol.STYLE_CIRCLE, 9, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([44,123,182]), 1), new Color([44,123,182]));
+				t.sym2  = new SimpleMarkerSymbol(SimpleMarkerSymbol.STYLE_CIRCLE, 9, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([171,217,233]), 1), new Color([171,217,233]));
+				t.sym3  = new SimpleMarkerSymbol(SimpleMarkerSymbol.STYLE_CIRCLE, 9, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([255,255,191]), 1), new Color([255,255,191]));
+				t.sym4  = new SimpleMarkerSymbol(SimpleMarkerSymbol.STYLE_CIRCLE, 9, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([253,174,97]), 1), new Color([253,174,97]));
+				t.sym5  = new SimpleMarkerSymbol(SimpleMarkerSymbol.STYLE_CIRCLE, 9, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([215,25,28]), 1), new Color([215,25,28]));
 			},
 			addGraphics: function(t){
 				t.obj.slr = $("#" + t.id + "top-wrap input[name='slrCh']:checked").val();
