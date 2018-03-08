@@ -5,10 +5,6 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 <div id="top-wrap" class="re-top-wrap">
 	<section>
 		<h3>Risk = Exposure x Vulnerability</h3>
-		<h4>Choose your variables to see your risk.</h4>
-		<label class="form-component" for="riskScoreToggle">
-			<input checked type="checkbox" id="riskScoreToggle" name="riskScore"><div class="check"></div><span class="form-text">Toggle Risk Score on or off</span>
-		</label>
 		<h4>Exposure is scored using seven bio-geophysical variables</h4>
 		<label class="form-component" for="slrCh-1">
 			<input checked type="radio" id="slrCh-1" name="slrCh" value="vi_m_h"><div class="check"></div><span class="form-text">With Sea Level Rise</span>
@@ -25,13 +21,49 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 		</label><br>
 		<label class="form-component" for="popCh-3">
 			<input checked type="checkbox" id="popCh-3" name="popCh" value="pov_score"><div class="check"></div><span class="form-text">Families in Poverty</span>
-		</label>
-	</section>
-	<section>
-		<h4>Show Me:</h4>
-		<label class="form-component" for="showMe-1">
-			<input type="checkbox" id="showMe-1" name="showMe"><div class="check"></div><span class="form-text">Priority conservation areas where habitats likely reduce risk now</span>
-		</label>
+		</label>	
+		<h4>Layer Visibility</h4>
+		<div style="display:flex;">
+			<div style="flex:2">
+				<label class="form-component" for="reVis-1">
+					<input checked type="radio" id="reVis-1" name="reVis" value="riskScore"><div class="check"></div><span class="form-text">Risk Score</span>
+				</label><br>
+				<label class="form-component" for="reVis-2">
+					<input type="radio" id="reVis-2" name="reVis" value="pca"><div class="check"></div><span class="form-text">Priority conservation areas where habitats likely reduce risk now</span>
+				</label>
+			</div>	
+			<div class="re-legendWrap">
+				<div class="re-legendDropShadow re-riskLegend">
+					<!-- <div>Risk Score</div> -->
+					<div class="re-legendRow">
+						<div class="re-legendBox" style="background:#2c7bb6;"></div><div class="re-legendLabel">0-5</div>
+					</div>
+					<div class="re-legendRow">
+						<div class="re-legendBox" style="background:#abd9e9;"></div><div class="re-legendLabel">5-10</div>
+					</div>	
+					<div class="re-legendRow">
+						<div class="re-legendBox" style="background:#ffffbf;"></div><div class="re-legendLabel">10-15</div>
+					</div>
+					<div class="re-legendRow">
+						<div class="re-legendBox" style="background:#fdae61;"></div><div class="re-legendLabel">15-20</div>
+					</div>
+					<div class="re-legendRow">
+						<div class="re-legendBox" style="background:#d7191c;"></div><div class="re-legendLabel">20-25</div>
+					</div>	
+				</div>
+				<div class="re-legendDropShadow re-pcaLegend">
+					<div class="re-legendRow">
+						<div class="re-legendBox" style="background:#fffd38;"></div><div>Lowest</div>
+					</div>
+					<div class="re-legendRow">
+						<div class="re-legendBox" style="background:#fda829;"></div><div>Medium</div>
+					</div>	
+					<div class="re-legendRow">
+						<div class="re-legendBox" style="background:#55e42a;"></div><div>Highest</div>
+					</div>
+				</div>		
+			</div>
+		</div>	
 	</section>
 </div>	
 

@@ -21,6 +21,32 @@ function ( declare, Query, QueryTask, graphicsUtils ) {
 					}
 					t.esriapi.updateGraphics(t);
 				});	 	
+				$("#" + t.id + "top-wrap input[name='reVis']").click(function(c){
+					if (c.currentTarget.value == "riskScore"){
+						$(".re-pcaLegend").hide();
+						$(".re-riskLegend").show();
+						t.obj.visibleLayers = [];
+						t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
+						t.map.graphics.setOpacity(1);
+						t.clicks.setDisabled(t,false);
+					}
+					if (c.currentTarget.value == "pca"){
+						$(".re-riskLegend").hide();
+						$(".re-pcaLegend").show();
+						t.obj.visibleLayers.push(0);
+						t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
+						t.map.graphics.setOpacity(0);
+						t.clicks.setDisabled(t,true);
+					}
+				});	
+			},
+			setDisabled: function(t,b){
+				var ar = ["slrCh", "popCh"];
+				$.each(ar,function(i,v){
+					$("#" + t.id + "top-wrap input[name='" + v + "']").each(function(i1,v1){
+						$(v1).prop("disabled",b);
+					});
+				});
 			},
 			makeVariables: function(t){
 				

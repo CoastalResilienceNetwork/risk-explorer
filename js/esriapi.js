@@ -11,7 +11,7 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
         return declare(null, {
 			esriApiFunctions: function(t){	
 				// Add dynamic map service
-				t.dynamicLayer = new ArcGISDynamicMapServiceLayer(t.url, {opacity:0.7});
+				t.dynamicLayer = new ArcGISDynamicMapServiceLayer(t.url, {opacity:1});
 				t.map.addLayer(t.dynamicLayer);
 				t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
 			
@@ -78,7 +78,18 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 						if (score >= 15 && score < 20){ v.setSymbol(t.sym4); }
 						if (score >= 20 && score <= 25){ v.setSymbol(t.sym5); }
 					}
-				})
+				});
+				if (db == 0){
+					var ar = ["0-1","1-2","2-3","3-4","4-5"];
+					$("#" + t.id + " .re-legendLabel").each(function(i,v){
+						$(v).html(ar[i]);
+					})
+				}else{
+					var ar = ["0-5","5-10","10-15","15-20","20-25"];
+					$("#" + t.id + " .re-legendLabel").each(function(i,v){
+						$(v).html(ar[i]);
+					})
+				}
 			},
 			clearAtts: function(t){
 				t.map.graphics.clear();
