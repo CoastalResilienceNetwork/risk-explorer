@@ -1,4 +1,6 @@
 {
 	"visibleLayers": [],
+	"slr": "",
+	"vulArray": ["pop_score","older_scor","pov_score"],
 	"extent": []
 }
