@@ -43,10 +43,19 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 				t.sym5  = new SimpleMarkerSymbol(SimpleMarkerSymbol.STYLE_CIRCLE, 9, new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([215,25,28]), 1), new Color([215,25,28]));
 			},
 			addGraphics: function(t){
+				console.log("addGraphics")
 				t.obj.slr = $("#" + t.id + "top-wrap input[name='slrCh']:checked").val();
+				var db = t.obj.vulArray.length
+				var vul = 5;
 				$.each(t.features, function(i,v){
 					var graphic = v;
-					var vul = (v.attributes.pop_score + v.attributes.pov_score + v.attributes.older_scor)/3;
+					if (db > 0){
+						var sm = 0;
+						$.each(t.obj.vulArray,function(i1,v1){
+							sm = sm + v.attributes[v1];
+						})
+						vul = sm / db;
+					}
 					var exp = v.attributes[t.obj.slr];
 					var score = vul * exp;
 					if (score < 5){ graphic.setSymbol(t.sym1); }
@@ -57,6 +66,7 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 					graphic.setAttributes(v.attributes);
 					t.map.graphics.add(graphic);
 				})
+				t.esriapi.updateLegend(t,db);
 			},
 			updateGraphics:function(t){
 				var db = t.obj.vulArray.length
@@ -79,6 +89,9 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 						if (score >= 20 && score <= 25){ v.setSymbol(t.sym5); }
 					}
 				});
+				t.esriapi.updateLegend(t,db);
+			},
+			updateLegend: function(t,db){
 				if (db == 0){
 					var ar = ["0-1","1-2","2-3","3-4","4-5"];
 					$("#" + t.id + " .re-legendLabel").each(function(i,v){
