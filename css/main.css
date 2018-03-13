@@ -14,7 +14,7 @@
 	cursor:wait;
 }
 .re-legendWrap{
-	padding-left:10px; flex:1;
+	flex:1;
 }
 .re-legendRow{
 	display:flex;
@@ -23,7 +23,7 @@
 	margin-right:4px; margin-top:2px; width:16px; height:16px; border-radius:50%; border:1pt solid #7F7F7F;
 }
 .re-legendDropShadow{
-	padding:8px 6px 6px 10px; background:#fbfbfb; box-sizing:border-box; border:1px solid #ddd; box-shadow:1px 1px 1px 0px rgba(0, 0, 0, 0.4) inset;
+	padding:8px 6px 6px 10px; background:#fbfbfb; box-sizing:border-box; border:1px solid #ddd; box-shadow:1px 1px 1px 0px rgba(0, 0, 0, 0.4) inset; min-width:120px;
 }
 .re-pcaLegend{
 	display:none;

@@ -26,7 +26,7 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 		<div style="display:flex;">
 			<div style="flex:2">
 				<label class="form-component" for="reVis-1">
-					<input checked type="radio" id="reVis-1" name="reVis" value="riskScore"><div class="check"></div><span class="form-text">Risk Score</span>
+					<input checked type="radio" id="reVis-1" name="reVis" value="riskScore"><div class="check"></div><span class="form-text">Risk Score = Exposure x Vulnerability</span>
 				</label><br>
 				<label class="form-component" for="reVis-2">
 					<input type="radio" id="reVis-2" name="reVis" value="pca"><div class="check"></div><span class="form-text">Priority conservation areas where habitats likely reduce risk now</span>
@@ -36,19 +36,19 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 				<div class="re-legendDropShadow re-riskLegend">
 					<!-- <div>Risk Score</div> -->
 					<div class="re-legendRow">
-						<div class="re-legendBox" style="background:#2c7bb6;"></div><div class="re-legendLabel">0-5</div>
+						<div class="re-legendBox" style="background:#2c7bb6;"></div><div class="re-legendLabel">Low Risk</div>
 					</div>
 					<div class="re-legendRow">
-						<div class="re-legendBox" style="background:#abd9e9;"></div><div class="re-legendLabel">5-10</div>
+						<div class="re-legendBox" style="background:#abd9e9;"></div><div class="re-legendLabel"></div>
 					</div>	
 					<div class="re-legendRow">
-						<div class="re-legendBox" style="background:#ffffbf;"></div><div class="re-legendLabel">10-15</div>
+						<div class="re-legendBox" style="background:#ffffbf;"></div><div class="re-legendLabel">Medium Risk</div>
 					</div>
 					<div class="re-legendRow">
-						<div class="re-legendBox" style="background:#fdae61;"></div><div class="re-legendLabel">15-20</div>
+						<div class="re-legendBox" style="background:#fdae61;"></div><div class="re-legendLabel"></div>
 					</div>
 					<div class="re-legendRow">
-						<div class="re-legendBox" style="background:#d7191c;"></div><div class="re-legendLabel">20-25</div>
+						<div class="re-legendBox" style="background:#d7191c;"></div><div class="re-legendLabel">High Risk</div>
 					</div>	
 				</div>
 				<div class="re-legendDropShadow re-pcaLegend">
@@ -63,7 +63,10 @@ The unique ContentPane id makes all the element ids unique and prevents duplicat
 					</div>
 				</div>		
 			</div>
-		</div>	
+		</div>
+	</section>
+	<section>
+		<div style="text-align:center; margin-top:20px;"><button id="reMethods" class="button button-default">Methods</button></div>
 	</section>
 </div>	
 
