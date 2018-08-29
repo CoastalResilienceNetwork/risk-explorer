@@ -26,6 +26,7 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 					}	
 				});
 				// Query all features for grahpics layer
+				t.map.setMapCursor("wait");
 				var q = new Query();
 				var qt = new QueryTask(t.url + "/0" );
 				q.where = "OBJECTID > -1";
@@ -64,6 +65,7 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 					if (score >= 20 && score <= 25){ graphic.setSymbol(t.sym5); }
 					graphic.setAttributes(v.attributes);
 					t.map.graphics.add(graphic);
+					t.map.setMapCursor("default");
 				})
 			},
 			updateGraphics:function(t){
