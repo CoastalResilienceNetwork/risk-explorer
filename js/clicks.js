@@ -41,7 +41,7 @@ function ( declare, Query, QueryTask, graphicsUtils ) {
 				});	
 				// methods click
 				$("#" + t.id + "reMethods").click(function(){
-					window.open("plugins/risk-explorer-nj/Arkema_et_al_2013_Nature_Climate_Change.pdf")
+					window.open("plugins/risk-explorer/Arkema_et_al_2013_Nature_Climate_Change.pdf")
 				})
 			},
 			setDisabled: function(t,b){
