@@ -3,5 +3,5 @@
 	"slr": "",
 	"vulArray": ["pop_score","older_scor","pov_score"],
 	"extent": [],
-	"url": "https://services.coastalresilience.org/arcgis/rest/services/New_Jersey/Risk_Explorer_NJ/MapServer"
+	"url": "https://services2.coastalresilience.org/arcgis/rest/services/New_Jersey/Risk_Explorer_NJ/MapServer"
 }
